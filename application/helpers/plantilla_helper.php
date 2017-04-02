@@ -144,6 +144,16 @@
 
 		function __destruct(){
 	?>
+			
+			</div>
+			<div class="container-fluid">
+				<footer class="zigzag jagged-top" style="margin-top: 20px;">
+				<div class="row">
+					<div>
+						<p>
+					</div>
+				</div>
+			</footer>
 			</div>
 		</body>
 		</html>
