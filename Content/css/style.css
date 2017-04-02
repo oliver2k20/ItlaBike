@@ -1,3 +1,19 @@
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
 .navbar .navbar-search .dropdown-menu { min-width: 25px; }
 .dropdown-menu .label-icon { margin-left: 5px; }
 .btn-outline {
@@ -146,3 +162,37 @@
     );
   background-size: 20px 40px;
 }
+
+/*Footer*/
+footer a{
+    text-decoration: none;
+    color: black;
+}
+
+.media-circle{
+    padding: 10px;
+    font-size: 30px;
+    width: 12%;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.facebook-button{
+    background: #3B5998;
+    color: white;
+}
+
+.twitter-button{
+      background: #55ACEE;
+      color: white;
+}
+
+.google-button{
+    background: #dd4b39;
+    color: white;
+}
+footer a:hover{
+    text-decoration: none;
+}
+

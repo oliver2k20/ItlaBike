@@ -15,6 +15,12 @@ $( document ).ready(function() {
     		function(){$(this).addClass('animated pulse');},
     		function(){$(this).removeClass('animated pulse');}
     	);
+    $(".rubber-hover").hover(
+    	function(){$(this).addClass('animated rubberBand');},
+    	function(){$(this).removeClass('animated rubberBand');}
+    );
+
+
 
     $(".destacados").bxSlider({
     	slideWidth: 300,

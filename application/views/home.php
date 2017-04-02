@@ -106,6 +106,7 @@
                 	</div>
                 </div>
             </div>
+
              <div class="slide pulse-hover col-sm-5 col-lg-3 col-md-3">
                 <div class="thumbnail">
                     <img class="" src="http://placehold.it/200x150" alt="">
@@ -121,5 +122,14 @@
                 	</div>
                 </div>
             </div>
+            <div class="slide pulse-hover col-sm-5 col-lg-3 col-md-3">
+                <div class="thumbnail">
+                    <img class="" src="http://placehold.it/200x270?text=Anuncio" alt="">
+                </div>
+            </div>
 	</div>
+</div>
+
+<div class="row" style="margin: 20px 0">
+	<h1>Aquí va un anuncio</h1>
 </div>

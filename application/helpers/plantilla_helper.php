@@ -33,7 +33,7 @@
 			<!---->
 
 			<link type="text/css" href="<?php  echo base_url('Content')?>/css/style.css" rel="stylesheet">
-			<script type="text/javascript" src="<?php  echo base_url('Content')?>/js/script2.js"></script>
+			<script type="text/javascript" src="<?php  echo base_url('Content')?>/js/script.js"></script>
 			
 			
 			<style>
@@ -155,10 +155,34 @@
 			
 			</div>
 			<div class="container-fluid">
-				<footer class="zigzag jagged-top" style="margin-top: 20px;">
+				<footer class="zigzag jagged-top" style="margin-top: 20px; padding-top: 20px;">
 				<div class="row">
-					<div>
-						<p>
+					<div class="col-xs-12 col-md-4">
+						
+						<ul style="list-style: none">
+									<h4>Categorías</h4>
+								    <li><a href="#"><b>Bicicletas</b></a></li>
+								    <li><a href="#"><b>Partes</b></a></li>
+								    <li><a href="#"><b>Accesorios</b></a></li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-md-4">
+						<h4>Contacto</h4>
+						<p>Teléfono: (809) 392-3924</p>
+						<p>Itlabikeshop@gmail.com</p>
+						<b><a href="#">Formulario de contacto</a></b>
+					</div>
+
+					<div class="col-xs-12 col-md-4">
+						<h4>Media</h4>
+						<a target="_blank" href="https://plus.google.com/113398186093625548979" class="rubber-hover google-button fa fa-google-plus media-circle"></a>
+						<a target="_blank" href="https://www.facebook.com/ITLABike-1667028566935787/" class="rubber-hover media-circle facebook-button fa fa-facebook"></a>
+						<a target="_blank" href="https://twitter.com/itlabikeshop" class="rubber-hover media-circle twitter-button fa fa-twitter"></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<p style="padding-top: 40px" class="text-center">© Copyright 2017 ItlaBike Shop, Inc.</p>
 					</div>
 				</div>
 			</footer>
