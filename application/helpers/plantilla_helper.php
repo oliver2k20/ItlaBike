@@ -53,9 +53,17 @@
 			        		<li class="dropdown">
 			        			<a href="#" data-toggle="dropdown" class="dropdown-toggle"><b>Categorías</b><span class="caret"></span></a>
 			        			<ul class="dropdown-menu">
-								    <li><a href="#">HTML</a></li>
-								    <li><a href="#">CSS</a></li>
-								    <li><a href="#">JavaScript</a></li>
+								    <li><a href="#"><b>Bicicletas</b></a></li>
+								    <li><a href="#">Carretera</a></li>
+								    <li><a href="#">BMX</a></li>
+								    <li><a href="#">Urbana</a></li>
+								    <li><a href="#">Playera</a></li>
+								    <li><a href="#">Infantil</a></li>
+								    <li><a href="#">Otra</a></li>
+								    <li class="divider"></li>
+								    <li><a href="#"><b>Partes</b></a></li>
+								    <li class="divider"></li>
+								    <li><a href="#"><b>Accesorios</b></a></li>
 								</ul>
 			        		</li>
 			        	</ul>
