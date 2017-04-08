@@ -20,7 +20,7 @@
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 			
 			<script src="https://use.fontawesome.com/4d3637b14b.js"></script>
-			<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css?family=Roboto" rel="styleesheet">
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
 			<!--Animate css-->
@@ -32,7 +32,7 @@
 			
 			<!---->
 
-			<link type="text/css" href="<?php  echo base_url('Content')?>/css/style.css" rel="stylesheet">
+			<link type="text/css" href="<?php  echo base_url('Content')?>/css/style2.css" rel="stylesheet">
 			<script type="text/javascript" src="<?php  echo base_url('Content')?>/js/script.js"></script>
 			
 			
@@ -43,13 +43,13 @@
 		<body>
 			<div class="container">
 
-				<nav class="navbar navbar-default">
+				<nav class="navbar navbar-default navbar-custom">
 
 			        <div class="nav nav-justified navbar-nav">
-			        	<a class="navbar-brand" href="#" ><img  style="margin-bottom:10px" width="100" height="25" /></a>
+			        	<a class="navbar-brand" href="<?php echo site_url('home')?>" ><img  style="margin-bottom:10px" width="100" height="25" /></a>
 			        	<ul class="nav navbar-nav">
-			        		<li><a href="#"><b>Inicio</b></a></li>
-			        		<li><a href="#"><b>Nosotros</b></a></li>
+			        		<li><a href="<?php echo site_url('home')?>"><b>Inicio</b></a></li>
+			        		<li><a href="<?php echo site_url('home/nosotros')?>"><b>Nosotros</b></a></li>
 			        		<li class="dropdown">
 			        			<a href="#" data-toggle="dropdown" class="dropdown-toggle"><b>Categorías</b><span class="caret"></span></a>
 			        			<ul class="dropdown-menu">
@@ -104,7 +104,7 @@
 								</ul>
 					        </li>
 					     
-					      <li class="tada-hover" style="padding-right: 10px"><a href="#"><span class="glyphicon glyphicon-star"></span>Deseados</a></li>
+					      <li class="tada-hover" style="padding-right: 10px"><a href="#"><span class="glyphicon glyphicon-star"></span><b>Deseados</b></a></li>
 					    </ul>
 			 			
 			            <form class="navbar-form navbar-search navbar-right" role="search">
@@ -112,11 +112,11 @@
 			                    <input type="text" class="form-control">
 			                
 			                    <div class="input-group-btn">
-			                        <button type="button" class="btn btn-search">
+			                        <button type="button" class="btn btn-search btn-info">
 			                            <span class="glyphicon glyphicon-search"></span>
 			                            <span class="label-icon">Buscar</span>
 			                        </button>
-			                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+			                        <button type="button" class="btn dropdown-toggle btn-info" data-toggle="dropdown">
 			                            <span class="caret"></span>
 			                        </button>
 			                        <ul class="dropdown-menu pull-right" role="menu">
@@ -155,8 +155,9 @@
 			
 			</div>
 			<div class="container-fluid">
-				<footer class="zigzag jagged-top" style="margin-top: 20px; padding-top: 20px;">
+				
 				<div class="row">
+					<footer class="zigzag jagged-top" style="background-color:#232F3E;margin-top: 20px; padding-top: 20px;">
 					<div class="col-xs-12 col-md-4">
 						
 						<ul style="list-style: none">
@@ -170,22 +171,32 @@
 						<h4>Contacto</h4>
 						<p>Teléfono: (809) 392-3924</p>
 						<p>Itlabikeshop@gmail.com</p>
-						<b><a href="#">Formulario de contacto</a></b>
+						<b><a href="<?php echo site_url('home/contacto')?>">Formulario de contacto</a></b>
 					</div>
 
 					<div class="col-xs-12 col-md-4">
-						<h4>Media</h4>
-						<a target="_blank" href="https://plus.google.com/113398186093625548979" class="rubber-hover google-button fa fa-google-plus media-circle"></a>
-						<a target="_blank" href="https://www.facebook.com/ITLABike-1667028566935787/" class="rubber-hover media-circle facebook-button fa fa-facebook"></a>
-						<a target="_blank" href="https://twitter.com/itlabikeshop" class="rubber-hover media-circle twitter-button fa fa-twitter"></a>
+						<div class="row">
+							<h4>Media</h4>
+							<div class="col-xs-4">
+								<a target="_blank" href="https://plus.google.com/113398186093625548979" class="rubber-hover google-button fa fa-google-plus media-circle"></a>
+							</div>
+							<div class="col-xs-4">
+								<a target="_blank" href="https://www.facebook.com/ITLABike-1667028566935787/" class="rubber-hover media-circle facebook-button fa fa-facebook"></a>
+							</div>
+							<div class="col-xs-4">
+								<a target="_blank" href="https://twitter.com/itlabikeshop" class="rubber-hover media-circle twitter-button fa fa-twitter"></a>
+							</div>
+						</div>
+						
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12">
-						<p style="padding-top: 40px" class="text-center">© Copyright 2017 ItlaBike Shop, Inc.</p>
+					<div class="row">
+						<div class="col-xs-12">
+							<p style="padding-top: 40px" class="text-center">© Copyright 2017 ItlaBike Shop, Inc.</p>
+						</div>
 					</div>
+
 				</div>
-			</footer>
+				</footer>
 			</div>
 		</body>
 		</html>

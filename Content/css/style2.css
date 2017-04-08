@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 a:link {
     text-decoration: none;
 }
@@ -14,6 +15,15 @@ a:active {
     text-decoration: none;
 }
 
+body{
+  font-family: 'Roboto', sans-serif;
+    color: #78858E;
+  background-color: white;
+}
+.navbar-custom {
+    color: black;
+    background-color: #F8F8F8;
+}
 .navbar .navbar-search .dropdown-menu { min-width: 25px; }
 .dropdown-menu .label-icon { margin-left: 5px; }
 .btn-outline {
@@ -26,7 +36,7 @@ a:active {
     min-width: 250px;
     padding: 14px 14px 0;
     overflow:hidden;
-    background-color:rgba(255,255,255,.8);
+    background-color:rgba(255,255,255,.9);
 }
 
 #login-dp .help-block {
@@ -34,7 +44,7 @@ a:active {
 }
 
 #login-dp .bottom {
-    background-color:rgba(255,255,255,.8);
+    background-color:rgba(255,255,255,.9);
     border-top:1px solid #ddd;
     clear:both;
     padding:14px;
@@ -87,10 +97,34 @@ a:active {
 /*Slider de Artículos destacados*/
 .slide-image {
     width: 100%;
+    z-index: 1;
 }
+
+.slide-text{
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 40%;
+  z-index: 10;
+  opacity: 0;
+  text-align: center;
+  transition: all 0.5s ease;
+  font-size: 50em;
+  vertical-align: middle;
+}
+
+.slide-text:hover {
+    opacity:1;
+}
+
 
 .carousel-holder {
     margin-bottom: 30px;
+
 }
 
 .carousel-control,
@@ -127,7 +161,7 @@ a:active {
 }
 
 .divider{
-    border-bottom: 1px solid gray;
+    border-bottom: 3px solid #D3D3D3;
     margin-bottom: 30px;
 }
 /*Efecto de borde dentado para el footer*/
@@ -146,36 +180,48 @@ a:active {
 }
 
 .jagged-top {
-  background: #CCC;
+  background: #232F3E;
 }
 .jagged-top:before {
   background:
     linear-gradient(
       45deg, transparent 33.333%,
-      #CCC 33.333%, #CCC 66.667%,
+      #232F3E 33.333%, #232F3E 66.667%,
       transparent 66.667%
     ),
     linear-gradient(
       -45deg, transparent 33.333%,
-      #CCC 33.333%, #CCC 66.667%,
+      #232F3E 33.333%, #232F3E 66.667%,
       transparent 66.667%
     );
   background-size: 20px 40px;
 }
 
 /*Footer*/
+footer{
+  color: white;
+  background-color: #232F3E;
+}
 footer a{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
+
+
 .media-circle{
-    padding: 10px;
+    position: relative;
+    height: auto;
+    padding: 20%;
     font-size: 30px;
-    width: 12%;
+    width: 70%;
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
+}
+
+.media-circle:hover{
+    color:white;
 }
 
 .facebook-button{
@@ -196,3 +242,39 @@ footer a:hover{
     text-decoration: none;
 }
 
+/*Efecto parallax de Nosotors */
+.parallax{
+    background: url("../img/mtnBike.jpg") no-repeat center center fixed;
+    height: 600px;
+    background-size: cover;
+}
+.parallax-interno{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+.Oswald{
+  font-family: 'Oswald', sans-serif;
+}
+
+.parallax-padding{
+  background: rgba(255,255,255,0.5);
+  padding: 10px;
+}
+
+.segment-margin{
+  margin: 20px 0px;
+}
+.info-box{
+  padding: 4px;
+  background-color: white ;
+  min-height: 300px;
+  border: 1px solid #CCCCCC;
+}
+.circle{
+  border-radius: 50%;
+  margin: 0 auto;
+}

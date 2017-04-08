@@ -14,17 +14,18 @@
 			<div class="carousel-inner">
 				 <div class="pulse-hover item active">
 				 	<a href="#">
-                    <img class="slide-image" src="http://placehold.it/1300x400" alt="">
+                    <img class="slide-image" src="<?php  echo base_url('Content')?>/img/bikeCategory2.jpg" height="200" alt="">
+                    </a>
+
+                </div>
+                <div class="pulse-hover item">
+                    <a href="#">
+                    <img class="slide-image" src="<?php  echo base_url('Content')?>/img/Partes2.jpg" alt="">
                 	</a>
                 </div>
                 <div class="pulse-hover item">
                     <a href="#">
-                    <img class="slide-image" src="http://placehold.it/1300x400" alt="">
-                	</a>
-                </div>
-                <div class="pulse-hover item">
-                    <a href="#">
-                    <img class="slide-image" src="http://placehold.it/1300x400" alt="">
+                    <img class="slide-image" src="<?php  echo base_url('Content')?>/img/Accesorios2.jpg" alt="">
                 	</a>
                 </div>
                 <a class="left carousel-control" href="#anuncios" data-slide="prev">
