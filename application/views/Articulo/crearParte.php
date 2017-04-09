@@ -6,6 +6,9 @@
 	if($_POST){
 		$CI->load->model('parte', '', TRUE);
 		$CI->parte->insertParte();
+
+		$CI->load->model('anuncio', '', TRUE);
+		$CI->anuncio->insertAnuncio(2);
 	}
 
 ?>
@@ -17,7 +20,7 @@
 			<!--Titulo-->
 			<div class='form-group col-sm-12 text-center'>
 				<h3 for='marca'>T&iacute;tulo</h3>
-				<input class='form-control' name='marca' id='marca'>
+				<input class='form-control' name='titulo' id='titulo'>
 
 			</div>
 

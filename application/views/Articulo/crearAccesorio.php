@@ -11,6 +11,9 @@
 		usar la configuracion del archivo de configuracion de base de datos para conectar nuestro modelo con su tabla correspondiente*/
 		$CI->load->model('accesorio', '', TRUE);
 		$CI->accesorio->insertAccesorio();
+
+		$CI->load->model('anuncio', '', TRUE);
+		$CI->anuncio->insertAnuncio(3);
 	}
 
 
@@ -22,7 +25,7 @@
 			<!--Titulo-->
 			<div class='form-group col-sm-12 text-center'>
 				<h3 for='marca'>T&iacute;tulo</h3>
-				<input class='form-control' name='marca' id='marca'>
+				<input class='form-control' name='titulo' id='titulo'>
 
 			</div>
 
