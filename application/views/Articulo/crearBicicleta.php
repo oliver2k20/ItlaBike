@@ -1,7 +1,20 @@
-<!--Pagina de creacion de articulos-->
+<!--Pagina de creacion de bicicleta-->
 
 <?php 
 	plantilla::inicio();
+
+	$mensaje = "";
+	$CI =& get_instance();
+	
+	if($_POST){
+		$datos = $_POST;
+
+		/*Cargamos el modelo para poder usarlo, esta variante con tres parametros nos permite
+		usar la configuracion del archivo de configuracion de base de datos para conectar nuestro modelo con su tabla correspondiente*/
+		$CI->load->model('bicicleta', '', TRUE);
+		$CI->bicicleta->insertBicicleta();
+
+	}
 
 ?>
 <!--Div que contiene el formulario y provee los margenes-->
@@ -11,7 +24,14 @@
 		<!--Formulario de creacion de bicicleta-->
 		<form id='form' method='post'>
 			<!--Titulo del fromulario-->
-			<h1>Nueva publicacion de bicicleta</h1>
+			<h1>Nueva publicaci&oacute;n de bicicleta</h1>
+			<!--Titulo-->
+			<div class='form-group col-sm-12 text-center'>
+				<h3 for='marca'>T&iacute;tulo</h3>
+				<input class='form-control' name='marca' id='marca'>
+
+			</div>
+
 			<!--Marca-->
 			<div class='form-group col col-sm-6'>
 				<label for='marca'>Marca</label>
@@ -64,7 +84,7 @@
 			<!--Tijeras-->
 			<div class='form-group col col-sm-6'>
 				<label for='tijeras'>Tijeras</label>
-				<input class='form-control' name='tijeras' id='tijeras'>
+				<input class='form-control' name='tijera' id='tijera'>
 
 			</div>
 
@@ -183,7 +203,7 @@
 			</div>
 
 			<!--Descripcion-->
-			<div class='form-group'>
+			<div class='form-group col-sm-12'>
 				<label>Descripci&oacute;n</label>
 				<textarea class='form-control' name='descripcion' id='descripcion'></textarea>
 			</div>

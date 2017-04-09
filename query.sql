@@ -56,7 +56,7 @@
 		cambios VARCHAR(100),
 		cadena VARCHAR(100),
 		pedales VARCHAR(100),
-		tujera VARCHAR(100),
+		tijera VARCHAR(100),
 		ruedas VARCHAR(100),
 		cuadro VARCHAR(100),
 		condicion INT NOT NULL,
@@ -196,3 +196,44 @@
 		CONSTRAINT PK_fotosAnuncios PRIMARY KEY (idFoto)
 
 	);
+
+
+INSERT INTO LK_condiciones(condicion) VALUES('Nuevo');
+INSERT INTO LK_condiciones(condicion) VALUES('Usado');
+
+INSERT INTO LK_estilos(estilo) VALUES('Carretera');
+INSERT INTO LK_estilos(estilo) VALUES('De montana');
+INSERT INTO LK_estilos(estilo) VALUES('BMX');
+INSERT INTO LK_estilos(estilo) VALUES('Urbana');
+INSERT INTO LK_estilos(estilo) VALUES('Playera');
+INSERT INTO LK_estilos(estilo) VALUES('Infantil');
+INSERT INTO LK_estilos(estilo) VALUES('Otra');
+
+INSERT INTO LK_colores(color) VALUES('Negro');
+INSERT INTO LK_colores(color) VALUES('Marron');
+INSERT INTO LK_colores(color) VALUES('Gris');
+INSERT INTO LK_colores(color) VALUES('Blanco');
+INSERT INTO LK_colores(color) VALUES('Azul');
+INSERT INTO LK_colores(color) VALUES('Verde');
+INSERT INTO LK_colores(color) VALUES('Amarillo');
+INSERT INTO LK_colores(color) VALUES('Naranja');
+INSERT INTO LK_colores(color) VALUES('Rojo');
+INSERT INTO LK_colores(color) VALUES('Rosado');
+INSERT INTO LK_colores(color) VALUES('Purpura');
+INSERT INTO LK_colores(color) VALUES('Otro');
+
+INSERT INTO LK_tiposParte(tipo) VALUES('Frenos');
+INSERT INTO LK_tiposParte(tipo) VALUES('Pinon');
+INSERT INTO LK_tiposParte(tipo) VALUES('Cambios');
+INSERT INTO LK_tiposParte(tipo) VALUES('Cadena');
+INSERT INTO LK_tiposParte(tipo) VALUES('Pedal');
+INSERT INTO LK_tiposParte(tipo) VALUES('Tijera');
+INSERT INTO LK_tiposParte(tipo) VALUES('Cuadro');
+INSERT INTO LK_tiposParte(tipo) VALUES('Manubrio');
+INSERT INTO LK_tiposParte(tipo) VALUES('Tija');
+INSERT INTO LK_tiposParte(tipo) VALUES('Sillin');
+INSERT INTO LK_tiposParte(tipo) VALUES('Biela');
+INSERT INTO LK_tiposParte(tipo) VALUES('Plato');
+
+
+

@@ -134,4 +134,7 @@
 <div class="row" style="margin: 20px 0">
 	<h1>Aquí va un anuncio</h1>
     <a class="btn btn-default" href="<?php echo site_url('articulo/crearBicicleta')?>">Crear</a>
+    <a class="btn btn-default" href="<?php echo site_url('articulo/crearParte') ?>">Anunciar parte</a>
+    <a class="btn btn-default" href="<?php echo site_url('articulo/crearAccesorio') ?>">Anunciar accesorio</a>
+
 </div>
