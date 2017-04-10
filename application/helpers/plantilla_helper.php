@@ -71,8 +71,25 @@
 			        	<ul class="nav navbar-nav navbar-right">
 			        		<!--Dropdown login-->
 			        		<li class="dropdown">
-					          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><b>Cuenta</b></a>
-								<ul id="login-dp" class="dropdown-menu">
+			        		<!-- Si el usuario está logueado envia a inicio, de lo contrario, muestra login-->
+					          <a <?php
+		                    		$CI =& get_instance(); 
+	  								$isLoggedIn = $CI->session->userdata('isUserLoggedIn');
+		                    		if($isLoggedIn){
+		                    			echo 'href="' . site_url('usuario/index') . '"';
+		                    		}else{
+		                    			echo 'href="#"  class="dropdown-toggle" data-toggle="dropdown"';
+		                    		}
+	                    		?> ><span class="glyphicon glyphicon-user"></span><b>Cuenta</b></a>
+	                    		
+	                    		<?php
+	                    		$CI =& get_instance(); 
+	  							$isLoggedIn = $CI->session->userdata('isUserLoggedIn');
+		                    	if($isLoggedIn){
+		                    		
+		                    	}else{
+		                    		$attributes = array("class" => "form","name" => "loginForm", "id" => "login-nav", "role" => "form", "method" => "post", "accept-charset" => "UTF-8");
+		                    		echo '<ul id="login-dp" class="dropdown-menu">
 									<li>
 										 <div class="row">
 												<div class="col-md-12">
@@ -82,27 +99,34 @@
 														<a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
 													</div>
 					                                <p>o ingresa tus datos</p>
-													 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+					                                 '  
+			            . form_open('usuario/login',$attributes).'
+													 
 															<div class="form-group">
 																 <label class="sr-only" for="exampleInputEmail2">Email address</label>
-																 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Correo" required>
+																 <input type="email" name="email" class="form-control" id="exampleInputEmail2" placeholder="Correo" required>
 															</div>
 															<div class="form-group">
 																 <label class="sr-only" for="exampleInputPassword2">Password</label>
-																 <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Contraseña" required>
+																 <input type="password" name="password" class="form-control" id="exampleInputPassword2" placeholder="Contraseña" required>
 					                                             <div class="help-block text-right"><a href="">Olvidaste la contraseña ?</a></div>
 															</div>
 															<div class="form-group">
-																 <button type="submit" name="loginSubmit" class="btn btn-primary btn-block">Ingresa</button>
+																 <button type="submit" name="loginSubmit" value="send" class="btn btn-primary btn-block">Ingresa</button>
 															</div>
-													 </form>
+													'.form_close().'
 												</div>
 												<div class="bottom text-center">
-													Eres nuevo ? <a href="#"><b>Únete</b></a>
+													Eres nuevo ? <a href="'.site_url('usuario/crear').'"><b>Únete</b></a>
 												</div>
 										 </div>
 									</li>
-								</ul>
+								</ul>';
+		                    	}
+
+					          	
+								
+								?>
 					        </li>
 					     
 					      <li class="tada-hover" style="padding-right: 10px"><a href="#"><span class="glyphicon glyphicon-star"></span><b>Deseados</b></a></li>
@@ -161,44 +185,45 @@
 			<div class="container-fluid">
 				
 				<div class="row">
-					<footer class="zigzag jagged-top" style="background-color:#232F3E;margin-top: 20px; padding-top: 20px;">
-					<div class="col-xs-12 col-md-4">
-						
-						<ul style="list-style: none">
-									<h4>Categorías</h4>
-								    <li><a href="#"><b>Bicicletas</b></a></li>
-								    <li><a href="#"><b>Partes</b></a></li>
-								    <li><a href="#"><b>Accesorios</b></a></li>
-						</ul>
-					</div>
-					<div class="col-xs-12 col-md-4">
-						<h4>Contacto</h4>
-						<p>Teléfono: (809) 392-3924</p>
-						<p>Itlabikeshop@gmail.com</p>
-						<b><a href="<?php echo site_url('home/contacto')?>">Formulario de contacto</a></b>
-					</div>
+					<footer class="zigzag jagged-top col-xs-12" style="background-color:#232F3E;margin-top: 20px; padding-top: 20px;">
+					<div class="col-xs-12">
+						<div class="col-xs-4 col-md-4">
+							
+							<ul style="list-style: none">
+										<h4>Categorías</h4>
+									    <li><a href="#"><b>Bicicletas</b></a></li>
+									    <li><a href="#"><b>Partes</b></a></li>
+									    <li><a href="#"><b>Accesorios</b></a></li>
+							</ul>
+						</div>
+						<div class="col-xs-4 col-md-4">
+							<h4>Contacto</h4>
+							<p>Teléfono: (809) 392-3924</p>
+							<p>Itlabikeshop@gmail.com</p>
+							<b><a href="<?php echo site_url('home/contacto')?>">Formulario de contacto</a></b>
+						</div>
 
-					<div class="col-xs-12 col-md-4">
+						<div class="col-xs-4 col-md-4">
+							<div class="row">
+								<h4>Media</h4>
+								<div class="col-xs-4">
+									<a target="_blank" href="https://plus.google.com/113398186093625548979" class="rubber-hover google-button fa fa-google-plus media-circle"></a>
+								</div>
+								<div class="col-xs-4">
+									<a target="_blank" href="https://www.facebook.com/ITLABike-1667028566935787/" class="rubber-hover media-circle facebook-button fa fa-facebook"></a>
+								</div>
+								<div class="col-xs-4">
+									<a target="_blank" href="https://twitter.com/itlabikeshop" class="rubber-hover media-circle twitter-button fa fa-twitter"></a>
+								</div>
+							</div>
+							
+						</div>
 						<div class="row">
-							<h4>Media</h4>
-							<div class="col-xs-4">
-								<a target="_blank" href="https://plus.google.com/113398186093625548979" class="rubber-hover google-button fa fa-google-plus media-circle"></a>
-							</div>
-							<div class="col-xs-4">
-								<a target="_blank" href="https://www.facebook.com/ITLABike-1667028566935787/" class="rubber-hover media-circle facebook-button fa fa-facebook"></a>
-							</div>
-							<div class="col-xs-4">
-								<a target="_blank" href="https://twitter.com/itlabikeshop" class="rubber-hover media-circle twitter-button fa fa-twitter"></a>
+							<div class="col-xs-12">
+								<p style="padding-top: 40px" class="text-center">© Copyright 2017 ItlaBike Shop, Inc.</p>
 							</div>
 						</div>
-						
 					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<p style="padding-top: 40px" class="text-center">© Copyright 2017 ItlaBike Shop, Inc.</p>
-						</div>
-					</div>
-
 				</div>
 				</footer>
 			</div>

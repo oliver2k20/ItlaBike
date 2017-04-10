@@ -77,7 +77,11 @@ $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'root',
+<<<<<<< HEAD
 	'password' => 'Dragonzord5',
+=======
+	'password' => 'GODBELONGSTOME',
+>>>>>>> 884000a6459560d22cca0753bb973b28c65e1ec6
 	'database' => 'ItlaBike',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
