@@ -34,19 +34,20 @@
 
 			<link type="text/css" href="<?php  echo base_url('Content')?>/css/style2.css" rel="stylesheet">
 			<script type="text/javascript" src="<?php  echo base_url('Content')?>/js/script.js"></script>
-			
+			<link rel="shortcut icon" href="<?php  echo base_url('Content')?>/Img/favicon.ico" type="image/x-icon">
+			<link rel="icon" href="<?php  echo base_url('Content')?>/Img/favicon.ico" type="image/x-icon">
 			
 			<style>
 				
 			</style>
 		</head>
 		<body>
-			<div class="container">
+			<div class="container" style="height: 80px" >
 
 				<nav class="navbar navbar-default navbar-custom">
 
 			        <div class="nav nav-justified navbar-nav">
-			        	<a class="navbar-brand" href="<?php echo site_url('home')?>" ><img  style="margin-bottom:10px" width="100" height="25" /></a>
+			        	<a class="navbar-brand" href="<?php echo site_url('home')?>" ><img src="<? echo base_url('Content')?>/Img/logo.png"  style="position: relative; z-index: 1;border: 1px solid #E7E7E7; margin-top: -7;" width="100" height="100	" /></a>
 			        	<ul class="nav navbar-nav">
 			        		<li><a href="<?php echo site_url('home')?>"><b>Inicio</b></a></li>
 			        		<li><a href="<?php echo site_url('home/nosotros')?>"><b>Nosotros</b></a></li>
@@ -92,7 +93,7 @@
 					                                             <div class="help-block text-right"><a href="">Olvidaste la contraseña ?</a></div>
 															</div>
 															<div class="form-group">
-																 <button type="submit" class="btn btn-primary btn-block">Ingresa</button>
+																 <button type="submit" name="loginSubmit" class="btn btn-primary btn-block">Ingresa</button>
 															</div>
 													 </form>
 												</div>
@@ -106,17 +107,17 @@
 					     
 					      <li class="tada-hover" style="padding-right: 10px"><a href="#"><span class="glyphicon glyphicon-star"></span><b>Deseados</b></a></li>
 					    </ul>
-			 			
-			            <form class="navbar-form navbar-search navbar-right" role="search">
+			            <?php $attributes = array("class" => "navbar-form navbar-search navbar-right","name" => "buscarForm", "id" => "form", "role" => "search"); 
+			            echo form_open('Articulo/crearBicicleta',$attributes); ?>
 			                <div class="input-group">
 			                    <input type="text" class="form-control">
 			                
 			                    <div class="input-group-btn">
-			                        <button type="button" class="btn btn-search btn-info">
+			                        <button type="submit" class="btn btn-search btn-info" name="btn-buscar">
 			                            <span class="glyphicon glyphicon-search"></span>
 			                            <span class="label-icon">Buscar</span>
 			                        </button>
-			                        <button type="button" class="btn dropdown-toggle btn-info" data-toggle="dropdown">
+			                        <button type="button" class="btn dropdown-toggle btn-info"  data-toggle="dropdown">
 			                            <span class="caret"></span>
 			                        </button>
 			                        <ul class="dropdown-menu pull-right" role="menu">
@@ -140,11 +141,14 @@
 			                            </li>
 			                        </ul>
 			                    </div>
-			                </div>  
+			                </div> 
+			            <?php echo form_close(); ?>
 			            </form>   
 			         
 			        </div>
 			    </nav>
+			   </div>
+			   <div class="container">
 			
 		
 	<?php
