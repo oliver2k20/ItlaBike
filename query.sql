@@ -10,7 +10,7 @@
 		apellido VARCHAR(50) NOT NULL,
 		telefono VARCHAR(10) NOT NULL,
 		tipo VARCHAR(100) DEFAULT 'Cliente',
-		foto VARCHAR(100) NOT NULL,
+
 
 		CONSTRAINT PK_Usuarios PRIMARY KEY (idUsuario),
 		CONSTRAINT UC_nombreUsuario UNIQUE (nombreUsuario),
