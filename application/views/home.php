@@ -47,87 +47,50 @@
 		<p><b>Nuestros Articulos destacados</b></p>
 	</div>
 	<div class="destacados">
-		  	 <div class="slide pulse-hover col-sm-5 col-lg-3 col-md-3">
-                <div class="thumbnail">
-                    <img class="" src="http://placehold.it/200x150" alt="">
-                    <div class="caption">
-                        <h4 class="pull-right">RD$400.00</h4>
-                        <h4><a href="#">Titulo del producto</a>
-                        </h4>
-                        <p>Esta es la descripción del producto que se trarea de la BD</p>
-                    </div>
-                    <div class="view-article">
-                		<button class="btn btn-info"><span class="glyphicon glyphicon-eye-open"></span> Ver</button>
-                		<button class="tada-hover pull-right btn btn-warning"><span class="glyphicon glyphicon-star"></span> Marcar	</button>
-                	</div>
-                </div>
-            </div>
-            <div class="slide pulse-hover col-sm-5 col-lg-3 col-md-3">
-                <div class="thumbnail">
-                    <img class="" src="http://placehold.it/200x150" alt="">
-                    <div class="caption">
-                        <h4 class="pull-right">RD$400.00</h4>
-                        <h4><a href="#">Titulo del producto</a>
-                        </h4>
-                        <p>Esta es la descripción del producto que se trarea de la BD</p>
-                    </div>
-                    <div class="view-article">
-                		<button class="btn btn-info"><span class="glyphicon glyphicon-eye-open"></span> Ver</button>
-                		<button class="tada-hover pull-right btn btn-warning"><span class="glyphicon glyphicon-star"></span> Marcar	</button>
-                	</div>
-                </div>
-            </div>
-            <div class="slide pulse-hover col-sm-5 col-lg-3 col-md-3">
-                <div class="thumbnail">
-                    <img class="" src="http://placehold.it/200x150" alt="">
-                    <div class="caption">
-                        <h4 class="pull-right">RD$100.00</h4>
-                        <h4><a href="#">Titulo del producto</a>
-                        </h4>
-                        <p>Esta es la descripción del producto que se trarea de la BD</p>
-                    </div>
-                    <div class="view-article">
-                		<button class="btn btn-info"><span class="glyphicon glyphicon-eye-open"></span> Ver</button>
-                		<button class="tada-hover pull-right btn btn-warning"><span class="glyphicon glyphicon-star"></span> Marcar	</button>
-                	</div>
-                </div>
-            </div>
-             <div class="slide pulse-hover col-sm-5 col-lg-3 col-md-3">
-                <div class="thumbnail">
-                    <img class="" src="http://placehold.it/200x150" alt="">
-                    <div class="caption">
-                        <h4 class="pull-right">RD$400.00</h4>
-                        <h4><a href="#">Titulo del producto</a>
-                        </h4>
-                        <p>Esta es la descripción del producto que se trarea de la BD</p>
-                    </div>
-                    <div class="view-article">
-                		<button class="btn btn-info"><span class="glyphicon glyphicon-eye-open"></span> Ver</button>
-                		<button class="tada-hover pull-right btn btn-warning"><span class="glyphicon glyphicon-star"></span> Marcar	</button>
-                	</div>
-                </div>
-            </div>
+		  	 
 
-             <div class="slide pulse-hover col-sm-5 col-lg-3 col-md-3">
-                <div class="thumbnail">
-                    <img class="" src="http://placehold.it/200x150" alt="">
-                    <div class="caption">
-                        <h4 class="pull-right">RD$300.00</h4>
-                        <h4><a href="#">Titulo del producto</a>
-                        </h4>
-                        <p>Esta es la descripción del producto que se trarea de la BD</p>
-                    </div>
-                    <div class="view-article">
-                		<button class="btn btn-info"><span class="glyphicon glyphicon-eye-open"></span> Ver</button>
-                		<button class="tada-hover pull-right btn btn-warning"><span class="glyphicon glyphicon-star"></span> Marcar	</button>
-                	</div>
-                </div>
-            </div>
-            <div class="slide pulse-hover col-sm-5 col-lg-3 col-md-3">
-                <div class="thumbnail">
-                    <img class="" src="http://placehold.it/200x270?text=Anuncio" alt="">
-                </div>
-            </div>
+            <!--Prueba para traer la informacion desde la bf con PHP-->
+            <?php
+                 $titulo = '';
+                 $precio = 0;
+                 $descripcion = '';
+
+                 $CI =& get_instance();
+
+                $result = $this->db->query('SELECT * FROM anuncios ORDER BY fecha_publicacion DESC LIMIT 10');
+               // $result = $this->db->get('anuncios');
+
+               /* $row = $result->row();
+                $precio = $row->precio;
+                echo '<script>';
+                echo 'alert("'. $precio .'")';
+                echo '</script>';*/
+
+                foreach ($result->result() as $row) {
+                    $titulo = $row->titulo;
+                    $precio = $row->precio;
+                    $descripcion = $row->descripcion;
+
+                    echo '<div class="slide pulse-hover col-sm-5 col-lg-3 col-md-3">';
+                    echo '<div class="thumbnail">';
+                    echo '<img class="" src="http://placehold.it/200x150" alt="">';
+                    echo '<div class="caption">';
+                    echo '<h4 class="pull-right">RD$'. $precio . '</h4>';
+                    echo '<h4><a href="#">'. $titulo . '</a>';
+                    echo '</h4>';
+                    echo '<p>'. $descripcion . '</p>';
+                    echo '</div>';
+                    echo '<div class="view-article">';
+                    echo '<button class="btn btn-info"><span class="glyphicon glyphicon-eye-open"></span> Ver</button>';
+                    echo '<button class="tada-hover pull-right btn btn-warning"><span class="glyphicon glyphicon-star"></span> Marcar   </button>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
+
+
+                }
+
+            ?>
 	</div>
 </div>
 

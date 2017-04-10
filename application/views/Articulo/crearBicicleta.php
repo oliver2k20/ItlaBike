@@ -100,7 +100,7 @@
 
 			<!--Cuadro-->
 			<div class='form-group col col-sm-6'>
-				<label for='cuadro'>Tijeras</label>
+				<label for='cuadro'>Cuadro</label>
 				<input class='form-control' name='cuadro' id='cuadro'>
 
 			</div>
