@@ -51,6 +51,11 @@
 
             <!--Prueba para traer la informacion desde la bf con PHP-->
             <?php
+                $id = 0;
+                $idBicicleta = 0;
+                $idParte = 0;
+                $idAccesorio = 0;
+
                  $titulo = '';
                  $precio = 0;
                  $descripcion = '';
@@ -70,6 +75,31 @@
                     $titulo = $row->titulo;
                     $precio = $row->precio;
                     $descripcion = $row->descripcion;
+                    $idBicicleta = $row->idBicicleta;
+                    $idParte = $row->idParte;
+                    $idAccesorio = $row->idAccesorio;
+                    $tipo = 0;
+
+                     //El id que trae es de accesorio
+                    if($idAccesorio == NULL && $idParte == NULL){
+                        $id = $idBicicleta;
+                        $tipo = 1;
+                    }
+
+                     //El id que trae es de accesorio
+                    if($idBicicleta == NULL && $idAccesorio == NULL){
+                        $id = $idParte;
+                        $tipo = 2;
+
+                    }
+
+                    //El id que trae es de accesorio
+                    if($idBicicleta == NULL && $idParte == NULL){
+                        $id = $idAccesorio;
+                        $tipo = 3;
+
+                    }
+
 
                     echo '<div class="slide pulse-hover col-sm-5 col-lg-3 col-md-3">';
                     echo '<div class="thumbnail">';
@@ -81,8 +111,13 @@
                     echo '<p>'. $descripcion . '</p>';
                     echo '</div>';
                     echo '<div class="view-article">';
-                    echo '<button class="btn btn-info"><span class="glyphicon glyphicon-eye-open"></span> Ver</button>';
+                    echo '<form method="post" action="' . site_url('articulo/cargarBicicleta'). '">';
+                    echo '<button class="btn btn-info" type="submit"><span class="glyphicon glyphicon-eye-open"></span> Ver</button>';      
+                    echo '<input type="hidden" name="id" value="'. $id .'"></input>';
+                    echo '<input type="hidden" name="tipo" value="'. $tipo .'"></input>';
+                    echo '<input type="hidden" name="titulo" value="'. $titulo .'"></input>';
                     echo '<button class="tada-hover pull-right btn btn-warning"><span class="glyphicon glyphicon-star"></span> Marcar   </button>';
+                    echo '</form>';
                     echo '</div>';
                     echo '</div>';
                     echo '</div>';
